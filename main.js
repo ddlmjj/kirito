@@ -221,7 +221,7 @@
 
     if(!userimage) {
       //ton avatar
-      message.reply(message.author.displayAvatarURL())
+      message.reply(message.author.displayAvatarURL(512))
     }
     //l'avatar deffinit pour la suite
     let avatarurl = message.member.guild.members.cache.find(ch => ch.name === userimage);

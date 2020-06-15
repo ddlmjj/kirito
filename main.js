@@ -222,7 +222,7 @@
     if(!userimage) {
       //ton avatar
       let embed = new Discord.MessageEmbed()
-      .spliceFields(index)
+      .spliceFields(25)
       .setImage(message.author.displayAvatarURL)
     }
     //l'avatar deffinit pour la suite

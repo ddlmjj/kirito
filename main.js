@@ -156,7 +156,10 @@
      //message pour verifier si le bot et connecter
     message.channel.send('pong')
    }
+   if(commande === `commande admin exp +`) {
+     message.channel.send(message.channel.id)
 
+   }
    if(commande === `${prefix}profile`) {
     let embedP = new Discord.MessageEmbed()
     .setDescription(message.author)

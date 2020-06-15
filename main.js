@@ -53,6 +53,7 @@
      if(message.content === `${prefix}play`) {
       
       //if(message.author.username === 'THE D.D.L.M.') {
+        if(!sauvegarde[message.author.id]){
          message.channel.send('detection compte')
           bot.on('message', function(message2) {
             setTimeout(() => {
@@ -82,6 +83,7 @@
             }, 3000);
           }, 5000);
           })
+        }
            
           
          //}
@@ -157,9 +159,21 @@
     message.channel.send('pong')
    }
    if(commande === `commande admin exp +`) {
-     message.channel.send(message.channel.id)
-
-   }
+    if (message.author.id === "685863015396147202") {
+      if(message.channel.id === "722084223892062228") {
+        let exp =   args[0]
+        let niveaux = args[1]
+        exp[message.author.id] = {
+          exp: exp,
+          niveaux: niveaux
+        }
+         fs.writeFile('exp.json', JSON.stringify(exp), (err) => {
+          if (err) throw err;
+             
+         })
+  }
+ }
+}
    if(commande === `${prefix}profile`) {
     let embedP = new Discord.MessageEmbed()
     .setDescription(message.author)

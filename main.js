@@ -155,6 +155,8 @@
       if(message.channel.id === "722084223892062228") {
         let exp =   args[0]
         let niveaux = args[1]
+        message.channel.send(args[1])
+        message.channel.send(args[0])
         exp[message.author.id] = {
           exp: exp,
           niveaux: niveaux
@@ -163,8 +165,8 @@
           if (err) throw err;
              
          })
-  }
- }
+  } else message.channel.send("vous n'etes pas sur le bon canal")
+ } else message.channel.send("vous n'aver pas les droit")
 }
    if(commande === `${prefix}profile`) {
     let embedP = new Discord.MessageEmbed()

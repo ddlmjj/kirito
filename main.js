@@ -53,14 +53,7 @@
      if(message.content === `${prefix}play`) {
       
       //if(message.author.username === 'THE D.D.L.M.') {
-        if(!sauvegarde[message.author.id]){
-         message.channel.send('detection compte')
-          bot.on('message', function(message2) {
-            setTimeout(() => {
-            let sauvegarde = require('./sauvegarde.json')
-           message2.edit('compte detecter lancement du jeu')
-            setTimeout(() => {
-            message2.edit('jeu lancer')
+        
             
             //sauvegarde
            
@@ -80,16 +73,15 @@
                fs.writeFile('sauvegarde.json', JSON.stringify(sauvegarde), (err) => {
                 if (err) throw err;
               });
-            }, 3000);
-          }, 5000);
-          })
-        }
+            
+          }
+        
            
           
          //}
          // else message.channel.send('cette commande est en construction');
           //return; 
-          }
+          
      
      
           if(sauvegarde2[message.author.id].test === 2) {
@@ -213,7 +205,7 @@
 }
       
    if(commande === `${prefix}lol`) {
-    
+    message.channel.send('yes')
    
        
     

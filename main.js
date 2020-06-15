@@ -388,7 +388,6 @@
           
           
         
-  });    
- 
-bot.login(Process.env.BOT_TOKEN);
+  });  
+  bot.login('NzA3OTE2NzM1NjEyODQ2MTUy.XuclEg.Yhe0QoKIulWrVa7049Eeba-6nxk');
 

@@ -221,9 +221,10 @@
 
     if(!userimage) {
       //ton avatar
-      let embed = new Discord.MessageEmbed()
+      let embedA = new Discord.MessageEmbed()
       .spliceFields(25)
-      .setImage(message.author.displayAvatarURL)
+      .setImage(message.author.displayAvatarURL);
+      message.channel.send(embedA)
     }
     //l'avatar deffinit pour la suite
     let avatarurl = message.member.guild.members.cache.find(ch => ch.name === userimage);

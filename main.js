@@ -222,7 +222,7 @@
     if(!userimage) {
       //ton avatar
       let embedA = new Discord.MessageEmbed()
-      .spliceFields(25)
+      .setURL(message.author.displayAvatarURL())
       .setColor('#00FFFF')
       .setImage(message.author.displayAvatarURL('jpg', 32));
       message.channel.send(embedA)

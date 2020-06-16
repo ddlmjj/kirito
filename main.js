@@ -224,7 +224,7 @@
       let embedA = new Discord.MessageEmbed()
       .spliceFields(25)
       .setColor('#00FFFF')
-      .addimage(message.author.displayAvatarURL('jpg', 64));
+      .addimage(message.author.displayAvatarURL('jpg', 32));
       message.channel.send(embedA)
     }
     //l'avatar deffinit pour la suite

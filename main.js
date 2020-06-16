@@ -231,7 +231,7 @@
     //l'avatar deffinit pour la suite
     
     let embedavatar = new Discord.MessageEmbed()
-    .setTitle(`c'est l'avatar de ${message.author.username}`)
+    .setTitle(`c'est l'avatar de ${userimage.username}`)
     .setColor('#00FFFF')
      
       .setImage(userimage.displayAvatarURL('jpg', 32));

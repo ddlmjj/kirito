@@ -225,7 +225,7 @@
       .setTitle(`c'est l'avatar de ${message.author.username}`)
       
       .setColor('#00FFFF')
-     .setImage(message.author.displayAvatarURL('jpg', 512));
+     .setImage(message.author.displayAvatarURL('jpg', '512x512'));
       message.channel.send(embedA)
     }
     //l'avatar deffinit pour la suite

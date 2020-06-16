@@ -223,7 +223,7 @@
       //ton avatar
       let embedA = new Discord.MessageEmbed()
       .spliceFields(25)
-      .setImage(message.author.displayAvatarURL('webp'));
+      .setImage(message.author.displayAvatarURL('jpg'));
       message.channel.send(embedA)
     }
     //l'avatar deffinit pour la suite

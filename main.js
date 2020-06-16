@@ -222,10 +222,10 @@
     if(!userimage) {
       //ton avatar
       let embedA = new Discord.MessageEmbed()
-      .setURL('https://test')
+      .setURL('https://dashboard.heroku.com/apps/drtvygrdrtydedytfrtr/logs')
       .setColor('#00FFFF')
-      .setImage(message.author.displayAvatarURL())
-      //.setImage(message.author.displayAvatarURL('jpg', 32));
+     
+      .setImage(message.author.displayAvatarURL('jpg', 32));
       message.channel.send(embedA)
     }
     //l'avatar deffinit pour la suite

@@ -223,9 +223,10 @@
       //ton avatar
       let embedA = new Discord.MessageEmbed()
       .setURL(message.author.displayAvatarURL())
-      .setColor('#00FFFF');
+      .setColor('#00FFFF')
+      .setImage(message.author.displayAvatarURL())
       //.setImage(message.author.displayAvatarURL('jpg', 32));
-      message.channel.send(embedA)
+      message.channel.send(message.author.displayAvatarURL())
     }
     //l'avatar deffinit pour la suite
     let avatarurl = message.member.guild.members.cache.find(ch => ch.name === userimage);

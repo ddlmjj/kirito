@@ -234,7 +234,7 @@
     .setTitle(`c'est l'avatar de ${userimage.username}`)
     .setColor('#00FFFF')
     .setImage(userimage.displayAvatarURL('jpg', 32));
-     message.channel.send(embedavatar)
+  message.channel.send(embedavatar)
 
     
 

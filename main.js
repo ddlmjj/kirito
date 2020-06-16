@@ -222,6 +222,7 @@
     if(!userimage) {
       //ton avatar
       let embedA = new Discord.MessageEmbed()
+      .setTitle(`c'est l'avatar de ${message.author.username}`)
       
       .setColor('#00FFFF')
      .setImage(message.author.displayAvatarURL('jpg', 32));
@@ -230,6 +231,7 @@
     //l'avatar deffinit pour la suite
     
     let embedavatar = new Discord.MessageEmbed()
+    .setTitle(`c'est l'avatar de ${message.author.username}`)
     .setColor('#00FFFF')
      
       .setImage(userimage.displayAvatarURL('jpg', 32));

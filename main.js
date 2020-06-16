@@ -223,6 +223,7 @@
       //ton avatar
       let embedA = new Discord.MessageEmbed()
       .spliceFields(25)
+      .setColor('#00FFFF')
       .addimage(message.author.displayAvatarURL('jpg', 64));
       message.channel.send(embedA)
     }

@@ -222,17 +222,18 @@
     if(!userimage) {
       //ton avatar
       let embedA = new Discord.MessageEmbed()
-      .setURL('https://dashboard.heroku.com/apps/drtvygrdrtydedytfrtr/logs')
+      
       .setColor('#00FFFF')
      
       .setImage(message.author.displayAvatarURL('jpg', 32));
       message.channel.send(embedA)
     }
     //l'avatar deffinit pour la suite
-    let avatarurl = message.member.guild.members.cache.find(ch => ch.name === userimage);
-    let avatarkrl = message.author.AvatarURL(avatarurl)
+    
     let embedavatar = new Discord.MessageEmbed()
-    .setThumbnail(avatarkrl);
+    .setColor('#00FFFF')
+     
+      .setImage(userimage.displayAvatarURL('jpg', 32));
     message.channel.send(embedavatar)
 
     

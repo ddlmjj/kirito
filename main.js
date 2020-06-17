@@ -145,7 +145,9 @@
        fs.writeFile('prefixes.json', JSON.stringify(prefixe), (err) => {
         if (err) throw err;
        })
-
+       if(message.content === `help prefixe`) {
+         message.channel.send(`le prefixe est ${prefixe}`)
+       }
    if(message.content === `${prefix}ping`) {
      //message pour verifier si le bot et connecter
     message.channel.send('pong')

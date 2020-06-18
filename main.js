@@ -68,7 +68,7 @@
      
      if(message.author.bot) return;
     
-     //if(message.channel.type === 'dm') return;
+     if(message.channel.type === 'dm') return;
      if(!prefixe[message.guild.id])
      prefixe[message.guild.id] = {
        prefixe: "K"

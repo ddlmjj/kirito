@@ -14,6 +14,7 @@
   const compte = require('./compte.json')
   const channelC = require('./channel.json')
   const prefixe = require('./prefixes.json')
+  const messageC = require('./messagerole.json')
  
 
   
@@ -32,6 +33,35 @@
       return channel.send('bienvenu sur le serveur')
      
     })
+   })
+
+   bot.on('messageReactionAdd', async reaction => {
+     if(reaction.emoji.name === ":crossed_swords:") {
+       const message = reaction.message
+       let messageCA = messageC[message.id].joueur
+       if(!messageCA) return;
+       if (messageCA === message.author.id) {
+         message.reply(`vous aver accepter le combat merci d'aller a ${messageC[message.id].serveur}`)
+         message.guild.channels.cache.get(messageC[message.id].channel).send('le combat a etait accepter')
+         let embedCA = new Discord.MessageEmbed()
+         .setTitle('au lanceur du defi')
+         .addField("PV", 100)
+         .addField("info", "cliquer sur les epee pour attaquerou sur le bouclier pour diminuer l'attaque")
+         message.guild.channels.cache.get(messageC[message.id].channel).send(embedCA).then (async message => {
+        
+          await message.react(':crossed_swords:')
+          await message.react(':shield:')
+          messageC["combat"] = {
+            1: messageC[message.id].lanceurdefi,
+            2: message.author.id
+          }
+          fs.writeFile('messagerole.json', JSON.stringify(messageC), (err) => {
+            if (err) throw err;
+            
+          });
+        })
+       }
+     }
    })
     
   bot.on('message', async message => {
@@ -245,7 +275,30 @@
     
 
   }
+  if(commande === `${prefix}combat`) {
+    const VS = message.mentions.users.first();
+    if(!VS) return message.channel.send('merci de choisir un joueur contre qui jouer');
+     let embedC = new Discord.MessageEmbed()
+     .setTitle(`${message.author.username} vous propose un combat`)
+     .addField('cliquer sur les epee pour accepter');
+     
+      VS.createDM().then(function (channel) {
+        channel.send(embedC).then(async mgg => {
+          await mgg.react(':crossed_swords:')
+          messageC[mgg.id] = {
+            joueur: VS.id,
+            lanceurdefi: message.author.id,
+            channel: message.channel.id,
+            serveur: message.guild
+          }
+          fs.writeFile('messagerole.json', JSON.stringify(messageC), (err) => {
+            if (err) throw err;
+            
+          });
+        })
 
+      })
+  }
     
     
    if (message.content === `${prefix}help`) {

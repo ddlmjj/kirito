@@ -228,7 +228,9 @@
       
       .setColor('#00FFFF')
      .setImage(
+
       message.author.displayAvatarURL(4096)
+      
       );
       message.channel.send(embedA)
     }

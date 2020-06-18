@@ -38,9 +38,9 @@
    bot.on('messageReactionAdd', async reaction => {
      if(reaction.emoji === "⚔️") {
        const message = reaction.message
-       let messageCA = messageC[message.id].joueur
-       if(!messageCA) return;
-       if (messageCA === message.author.id) {
+       
+       if(!messageC[message.id]) return;
+       
          message.reply(`vous aver accepter le combat merci d'aller a ${messageC[message.id].serveur}`)
          message.guild.channels.cache.get(messageC[message.id].channel).send('le combat a etait accepter')
          let embedCA = new Discord.MessageEmbed()
@@ -61,7 +61,7 @@
           });
         })
        }
-     }
+     
    })
     
   bot.on('message', async message => {

@@ -489,12 +489,12 @@ if(commande === `${prefix}stop`) {
   if(!sauvegarde2 || !sauvegarde2 || !compte || !channelC || !prefixe || messageC) {
 
 } else {
-  message3.edit(sauvegarde2)
-  message4.edit(sauvegarde)
-  message5.edit(compte)
-  message6.edit(channelC)
-  message7.edit(prefixe)
-  message8.edit(messageC)
+  //message3.edit(sauvegarde2)
+  //message4.edit(sauvegarde)
+  //message5.edit(compte)
+  //message6.edit(channelC)
+  //message7.edit(prefixe)
+  //message8.edit(messageC)
 }
        
           if (message.content.startsWith(`${prefix}kick`)) {

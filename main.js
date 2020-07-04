@@ -245,7 +245,9 @@
  }
 if(commande === `${prefix}stop`) {
   if(message.author.id === '685863015396147202') {
+    message.reply('kirito est maintenant en maintenace')
     bot.destroy()
+    
   }
 
 }

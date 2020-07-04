@@ -91,27 +91,27 @@
      
      if(message.content === `${prefix}creation`) {
        if(message.author.id === '685863015396147202') {
-         message.channel.send(sauvegarde)
+         message.channel.send(`test ${sauvegarde}`)
          bot.on('message', async message3 => {
           console.log(message3)
          })
-         message.channel.send(sauvegarde2)
+         message.channel.send(`test ${sauvegarde2}`)
          bot.on('message', async message4 => {
           console.log(message4)
          }) 
-         message.channel.send(compte)
+         message.channel.send(`test ${compte}`)
          bot.on('message', async message5 => {
           console.log(message5)
          })
-         message.channel.send(channelC)
+         message.channel.send(`test ${channelC}`)
          bot.on('message', async message6 => {
           console.log(message6)
         })
-         message.channel.send(prefixe)
+         message.channel.send(`test ${prefixe}`)
          bot.on('message', async message7 => {
           console.log(message7)
         })
-         message.channel.send(messageC)
+         message.channel.send(`test ${messageC}`)
          bot.on('message', async message8 => {
           console.log(message8)
         })

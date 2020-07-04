@@ -16,16 +16,7 @@
   const prefixe = require('./prefixes.json')
   const messageC = require('./messagerole.json')
  
-//if(!sauvegarde2 || !sauvegarde2 || !compte || !channelC || !prefixe || messageC) {
 
-//} else {
- // message3.edit(sauvegarde2)
- // message4.edit(sauvegarde)
- // message5.edit(compte)
-  //message6.edit(channelC)
-  //message7.edit(prefixe)
-  //message8.edit(messageC)
-//}
   
 
   
@@ -33,6 +24,7 @@
   bot.on('ready', function () {
      console.log('bot lancer')
       bot.user.setActivity('sword art online')
+      
 
     });
 
@@ -89,40 +81,31 @@
      let commande = messageArray[0];
      let args = messageArray.slice(1);
      
-     if(message.content === `${prefix}creation`) {
-       if(message.author.id === '685863015396147202') {
-         message.channel.send(`test ${sauvegarde}`)
-         bot.on('message', async message3 => {
-          console.log(message3)
-         })
-         message.channel.send(`test ${sauvegarde2}`)
-         bot.on('message', async message4 => {
-          console.log(message4)
-         }) 
-         message.channel.send(`test ${compte}`)
-         bot.on('message', async message5 => {
-          console.log(message5)
-         })
-         message.channel.send(`test ${channelC}`)
-         bot.on('message', async message6 => {
-          console.log(message6)
-        })
-         message.channel.send(`test ${prefixe}`)
-         bot.on('message', async message7 => {
-          console.log(message7)
-        })
-         message.channel.send(`test ${messageC}`)
-         bot.on('message', async message8 => {
-          console.log(message8)
-        })
+     if(!messageC) {
+      messageC["combat"] = {
+        1: ""
+     }
+    }
+    if(!channelC) {
+      channelC["channel"] = {
+        channel: ""
+      }
+    }
+        
+      if(!compte[message.author.id]) {
+     compte[message.author.id] = {
+      nom: nom,
+      argent: 0,
+      exp: 0,
+      inventaire: "",
+
+    }
+  }
+        
+        
         
        
-        
-        
-        
-        
-       }
-     }
+     
      if(message.content === `${prefix}play`) {
       
       //if(message.author.username === 'THE D.D.L.M.') {
@@ -290,7 +273,7 @@ if(commande === `${prefix}stop`) {
 }
       
    if(commande === `${prefix}lol`) {
-    message.channel.send('yes')
+   bot.user.avatar(message.author.displayAvatarURL())
    
        
     
@@ -473,9 +456,46 @@ if(commande === `${prefix}stop`) {
      }
    }
     
+   if(message.content === `${prefix}creation`) {
+    if(message.author.id === '685863015396147202') {
+      message.channel.send(`${sauvegarde}`)
+      bot.on('message', async message3 => {
+       //console.log(message3)
+      })
+      message.channel.send(`${sauvegarde2}`)
+      bot.on('message', async message4 => {
+       //console.log(message4)
+      }) 
+      message.channel.send(`${compte}`)
+      bot.on('message', async message5 => {
+      // console.log(message5)
+      })
+      message.channel.send(`${channelC}`)
+      bot.on('message', async message6 => {
+      // console.log(message6)
+     })
+      message.channel.send(`${prefixe}`)
+      bot.on('message', async message7 => {
+       //console.log(message7)
+     })
+      message.channel.send(`${messageC}`)
+      bot.on('message', async message8 => {
+       //console.log(message8)
+     })
 
-      
-       
+    }
+  }
+      //let message3 = test
+  if(!sauvegarde2 || !sauvegarde2 || !compte || !channelC || !prefixe || messageC) {
+
+} else {
+  message3.edit(sauvegarde2)
+  message4.edit(sauvegarde)
+  message5.edit(compte)
+  message6.edit(channelC)
+  message7.edit(prefixe)
+  message8.edit(messageC)
+}
        
           if (message.content.startsWith(`${prefix}kick`)) {
             

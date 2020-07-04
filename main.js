@@ -249,7 +249,7 @@ if(commande === `${prefix}stop`) {
     message.reply('kirito est maintenant en maintenace')
     bot.destroy()
     
-  } else message.reply("vous n'aver pas les droit d'administrateur du bot")
+  } else message.reply("vous n'aver pas les droit d'administrateur du bot test: ", message.author.id)
 
 }
  if(commande === `${prefix}prefixe`) {

@@ -68,9 +68,7 @@
      
      if(message.author.bot) return;
     
-     if(message.channel.type === 'dm') return;
      
-     console.log(message)
      if(!prefixe[message.guild.id])
      prefixe[message.guild.id] = {
        prefixe: "K"
@@ -81,7 +79,29 @@
      let messageArray = message.content.split(' ');
      let commande = messageArray[0];
      let args = messageArray.slice(1);
-
+     
+     if(message.content === `${prefix}creation`) {
+       if(message.author.id === '685863015396147202') {
+         message.channel.send(sauvegarde)
+         bot.on('message', async message3 => {
+         })
+         message.channel.send(sauvegarde2)
+         bot.on('message', async message4 => {
+         })
+         message.channel.send(compte)
+         bot.on('message', async message5 => {
+         })
+         message.channel.send(channelC)
+         bot.on('message', async message6 => {
+        })
+         message.channel.send(prefixe)
+         bot.on('message', async message7 => {
+        })
+         message.channel.send(messageC)
+         bot.on('message', async message8 => {
+        })
+       }
+     }
      if(message.content === `${prefix}play`) {
       
       //if(message.author.username === 'THE D.D.L.M.') {
@@ -178,7 +198,7 @@
         if (err) throw err;
        })
        if(message.content === `help prefixe`) {
-         message.channel.send(`le prefixe est ${prefixe}`)
+         message.channel.send(`le prefixe est ${prefix}`)
        }
    if(message.content === `${prefix}ping`) {
      //message pour verifier si le bot et connecter
@@ -223,7 +243,12 @@
 
 
  }
+if(commande === `${prefix}stop`) {
+  if(message.author.id === '685863015396147202') {
+    bot.destroy()
+  }
 
+}
  if(commande === `${prefix}prefixe`) {
   if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("vous n'aver pas les droits");
   if (!args[0] || args[0] === "help") return message.reply('syntax: Kprefixe <le nv prefixe>');

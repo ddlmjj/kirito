@@ -16,7 +16,16 @@
   const prefixe = require('./prefixes.json')
   const messageC = require('./messagerole.json')
  
+//if(!sauvegarde2 || !sauvegarde2 || !compte || !channelC || !prefixe || messageC) {
 
+//} else {
+ // message3.edit(sauvegarde2)
+ // message4.edit(sauvegarde)
+ // message5.edit(compte)
+  //message6.edit(channelC)
+  //message7.edit(prefixe)
+  //message8.edit(messageC)
+//}
   
 
   
@@ -84,22 +93,34 @@
        if(message.author.id === '685863015396147202') {
          message.channel.send(sauvegarde)
          bot.on('message', async message3 => {
+          console.log(message3)
          })
          message.channel.send(sauvegarde2)
          bot.on('message', async message4 => {
-         })
+          console.log(message4)
+         }) 
          message.channel.send(compte)
          bot.on('message', async message5 => {
+          console.log(message5)
          })
          message.channel.send(channelC)
          bot.on('message', async message6 => {
+          console.log(message6)
         })
          message.channel.send(prefixe)
          bot.on('message', async message7 => {
+          console.log(message7)
         })
          message.channel.send(messageC)
          bot.on('message', async message8 => {
+          console.log(message8)
         })
+        
+       
+        
+        
+        
+        
        }
      }
      if(message.content === `${prefix}play`) {

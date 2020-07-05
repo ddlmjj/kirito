@@ -66,6 +66,7 @@
    })
     
   bot.on('message', async message => {
+    console.log(message)
      
      if(message.author.bot) return;
     
@@ -469,7 +470,7 @@ if(commande === `${prefix}stop`) {
       }) 
       message.channel.send(`3`)
       bot.on('message', function (message5) {
-        channel.send(message5)
+        console.log(message5)
       })
       message.channel.send(`4`)
       bot.on('message', function (message6) {

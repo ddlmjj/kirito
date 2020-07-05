@@ -460,11 +460,11 @@ if(commande === `${prefix}stop`) {
     if(message.author.id === '685863015396147202') {
       message.member.createDM().then(function (channel) {
       message.channel.send(`1`)
-      bot.on('message', function (message5) {
+      bot.on('message', function (message3) {
        channel.send(message3)
       })
       message.channel.send(`2`)
-      bot.on('message', function (message5){
+      bot.on('message', function (message4){
         channel.send(message4)
       }) 
       message.channel.send(`3`)
@@ -472,15 +472,15 @@ if(commande === `${prefix}stop`) {
         channel.send(message5)
       })
       message.channel.send(`4`)
-      bot.on('message', function (message5) {
+      bot.on('message', function (message6) {
         channel.send(message6)
      })
       message.channel.send(`5`)
-      bot.on('message', function (message5) {
+      bot.on('message', function (message7) {
         channel.send(message7)
      })
       message.channel.send(`6`)
-      bot.on('message', function (message5) {
+      bot.on('message', function (message8) {
         channel.send(message8)
      })
     })

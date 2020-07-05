@@ -94,7 +94,7 @@
         
       if(!compte[message.author.id]) {
      compte[message.author.id] = {
-      nom: nom,
+      nom: "",
       argent: 0,
       exp: 0,
       inventaire: "",
@@ -458,31 +458,32 @@ if(commande === `${prefix}stop`) {
     
    if(message.content === `${prefix}creation`) {
     if(message.author.id === '685863015396147202') {
+      message.member.createDM().then(function (channel) {
       message.channel.send(`${sauvegarde}`)
       bot.on('message', async message3 => {
-       //console.log(message3)
+       channel.send(message3)
       })
       message.channel.send(`${sauvegarde2}`)
       bot.on('message', async message4 => {
-       //console.log(message4)
+        channel.send(message4)
       }) 
       message.channel.send(`${compte}`)
       bot.on('message', async message5 => {
-      // console.log(message5)
+        channel.send(message5)
       })
       message.channel.send(`${channelC}`)
       bot.on('message', async message6 => {
-      // console.log(message6)
+        channel.send(message6)
      })
       message.channel.send(`${prefixe}`)
       bot.on('message', async message7 => {
-       //console.log(message7)
+        channel.send(message7)
      })
       message.channel.send(`${messageC}`)
       bot.on('message', async message8 => {
-       //console.log(message8)
+        channel.send(message8)
      })
-
+    })
     }
   }
       //let message3 = test

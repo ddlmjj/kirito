@@ -66,7 +66,7 @@
    })
     
   bot.on('message', async message => {
-    console.log(message)
+    //console.log(message)
      
      if(message.author.bot) return;
     
@@ -274,108 +274,8 @@ if(commande === `${prefix}stop`) {
 }
       
    if(commande === `${prefix}lol`) {
-    let message3 = `Message {
-      channel: TextChannel {
-        type: 'text',
-        deleted: false,
-        id: '728620845001343070',
-        name: 'maintenance',
-        rawPosition: 0,
-        parentID: null,
-        permissionOverwrites: Collection [Map] {},
-        topic: null,
-        nsfw: false,
-        lastMessageID: '729326316964544532',
-        rateLimitPerUser: 0,
-        lastPinTimestamp: null,
-        guild: Guild {
-          members: [GuildMemberManager],
-         channels: [GuildChannelManager],
-          roles: [RoleManager],
-         presences: [PresenceManager],
-          voiceStates: [VoiceStateManager],
-          deleted: false,
-          available: true,
-          id: '728620844418596866',
-          shardID: 0,
-         name: 'maintenance kirito',
-          icon: '2de1ca531b2c4d03b3b7bf22298117f3',
-         splash: null,
-          region: 'europe',
-          memberCount: 2,
-          large: false,
-         features: [],
-          applicationID: null,
-          afkTimeout: 300,
-        afkChannelID: null,
-          systemChannelID: '728620845001343070',
-          embedEnabled: undefined,
-          premiumTier: 0,
-          premiumSubscriptionCount: 0,
-          verificationLevel: 'NONE',
-          explicitContentFilter: 'DISABLED',
-          mfaLevel: 0,
-          joinedTimestamp: 1593796223756,
-          defaultMessageNotifications: 'ALL',
-          systemChannelFlags: [SystemChannelFlags],
-          vanityURLCode: null,
-          description: null,
-         banner: null,
-          rulesChannelID: null,
-          publicUpdatesChannelID: null,
-          ownerID: '685863015396147202',
-          emojis: [GuildEmojiManager]
-        },
-        messages: MessageManager {
-          cacheType: [Function: LimitedCollection],
-          cache: [LimitedCollection [Map]],
-          channel: [Circular]
-        },
-        _typing: Map { '685863015396147202' => [Object] }
-      },
-      deleted: false,
-      id: '729326316964544532',
-      type: 'DEFAULT',
-      content: 'Kplay',
-      author: User {
-        id: '685863015396147202',
-        bot: false,
-        username: '𝕿𝕳𝕰 𝕯.𝕯.𝕷.𝕸.',
-        discriminator: '1999',
-        avatar: 'f409c08031df04fd69e6cde9c4c126f4',
-       lastMessageID: '729326316964544532',
-        lastMessageChannelID: '728620845001343070',
-        flags: UserFlags { bitfield: 0 }
-      },
-     pinned: false,
-      tts: false,
-      nonce: '735497094256656384',
-      system: false,
-      embeds: [],
-      attachments: Collection [Map] {},
-      createdTimestamp: 1593955344192,
-      editedTimestamp: null,
-      reactions: ReactionManager {
-        cacheType: [Function: Collection],
-        cache: Collection [Map] {},
-       message: [Circular]
-      },
-      mentions: MessageMentions {
-        everyone: false,
-        users: Collection [Map] {},
-       roles: Collection [Map] {},
-        _members: null,
-        _channels: null,
-        crosspostedChannels: Collection [Map] {}
-      },
-      webhookID: null,
-      application: null,
-     activity: null,
-      _edits: [],
-      flags: MessageFlags { bitfield: 0 },
-      reference: null
-    }`
-    message3.edit('test')
+    
+    message.channel.send(message.author.avatar)
    
        
     

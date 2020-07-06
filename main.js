@@ -29,7 +29,7 @@
     });
 
    bot.on('guildMemberAdd', function(member) {
-     
+
 
     member.createDM().then(function (channel) {
       return channel.send('bienvenu sur le serveur')
@@ -275,9 +275,8 @@ if(commande === `${prefix}stop`) {
 }
       
    if(commande === `${prefix}lol`) {
-    
-   message.id.replace
-   
+
+   bot.channels.cache.get('729636065467695105').send('yes')
        
     
    }

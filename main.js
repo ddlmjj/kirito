@@ -275,7 +275,7 @@ if(commande === `${prefix}stop`) {
       
    if(commande === `${prefix}lol`) {
     
-    message.channel.send(message.author.avatar)
+   message.id.replace
    
        
     

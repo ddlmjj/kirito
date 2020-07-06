@@ -1,7 +1,7 @@
 {
   "name": "bot-off",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "bot en constructio",
   "main": "main.js",
   "dependencies": {
     "discord.js": "^12.2.0"
@@ -10,6 +10,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "noan",
   "license": "ISC"
 }

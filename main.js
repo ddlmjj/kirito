@@ -44,7 +44,7 @@
        if(!messageC[message.id]) return;
        
          message.reply(`vous aver accepter le combat merci d'aller a ${messageC[message.id].serveur}`)
-         bot.channels.cache.get(messageC[message.id].channel).send('le combat a etait accepter')
+         bot.channels.cache.get('707192424757329920').send('le combat a etait accepter')
          let embedCA = new Discord.MessageEmbed()
          .setTitle('au lanceur du defi')
          .addField("PV", 100)

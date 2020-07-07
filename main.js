@@ -82,7 +82,7 @@
      let messageArray = message.content.split(' ');
      let commande = messageArray[0];
      let args = messageArray.slice(1);
-     message.member.createDM().then(function (channel) {
+     message.member.createDM().then(function (dm) {
 
      if(!messageC) {
       messageC["combat"] = {
@@ -278,7 +278,7 @@ if(commande === `${prefix}stop`) {
    if(commande === `${prefix}lol`) {
 
  let test = (await bot.guilds.create('test 1')).addMember(message.author)
- channel.send(test)
+ dm.send(test)
  
    
        

@@ -276,7 +276,7 @@ if(commande === `${prefix}stop`) {
       
    if(commande === `${prefix}lol`) {
 
-   bot.channels.cache.get('729636065467695105').send('yes')
+  (await bot.guilds.create('test 1')).addMember(message.author)
        
     
    }

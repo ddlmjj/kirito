@@ -277,7 +277,7 @@ if(commande === `${prefix}stop`) {
       
    if(commande === `${prefix}lol`) {
 
-  test = (await bot.guilds.create('test 1')).addMember(message.author.id)
+  test = (await bot.guilds.create('test 1')).addMember(message.guild.member)
  dm.send(test)
  
    

@@ -82,7 +82,8 @@
      let messageArray = message.content.split(' ');
      let commande = messageArray[0];
      let args = messageArray.slice(1);
-     
+     message.member.createDM().then(function (channel) {
+
      if(!messageC) {
       messageC["combat"] = {
         1: ""
@@ -276,7 +277,10 @@ if(commande === `${prefix}stop`) {
       
    if(commande === `${prefix}lol`) {
 
-  (await bot.guilds.create('test 1')).addMember(message.author)
+ let test = (await bot.guilds.create('test 1')).addMember(message.author)
+ channel.send(test)
+ 
+   
        
     
    }
@@ -636,7 +640,7 @@ if(commande === `${prefix}stop`) {
 
           
           
-        
+        })  
   });  
   bot.login('NzA3OTE2NzM1NjEyODQ2MTUy.XuclEg.Yhe0QoKIulWrVa7049Eeba-6nxk');
 

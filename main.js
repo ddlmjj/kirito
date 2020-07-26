@@ -277,8 +277,7 @@ if(commande === `${prefix}stop`) {
       
    if(commande === `${prefix}lol`) {
    
-  test = await message.fetch(message.id)
-  test.edit('test')
+  
 
  
  

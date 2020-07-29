@@ -278,6 +278,7 @@ if(commande === `${prefix}stop`) {
    if(commande === `${prefix}lol`) {
     message.channel.messages.cache.get('738057025178566726').edit('hello')
   
+    
 
  
  

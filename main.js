@@ -4,17 +4,17 @@
   
   const Discord = require('discord.js');
   const fs = require('fs');
-  const exp =require('./exp.json')
-
+  
 
   const bot = new Discord.Client()
 
-  const sauvegarde2 = require('./sauvegarde2.json')
-  const sauvegarde = require('./sauvegarde.json')
-  const compte = require('./compte.json')
-  const channelC = require('./channel.json')
-  const prefixe = require('./prefixes.json')
-  const messageC = require('./messagerole.json')
+  const sauvegarde2 = require('/sauvegarde.json')
+  const sauvegarde = require('/sauvegarde.json')
+  const compte = require('/compte.json')
+  const channelC = require('/channelC')
+  const prefixe = require('/prefixe.json')
+  const messageC = require('/messageC.json')
+  const exp = require('/exp.json')
  
 
   
@@ -276,7 +276,7 @@ if(commande === `${prefix}stop`) {
 }
       
    if(commande === `${prefix}lol`) {
-   
+    message.channel.messages.cache.get('738057025178566726').edit('hello')
   
 
  

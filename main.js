@@ -969,4 +969,4 @@ let addexp = ('1')
 
   //______________________________________________________________________________________________________________________________________________
 
-  bot.login('NzA3OTE2NzM1NjEyODQ2MTUy.XrPw1g.Cma5SxX0MIx_UNM4IR_A_TsqgnY');
+  bot.login(process.env.TOKEN);

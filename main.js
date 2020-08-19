@@ -965,7 +965,7 @@ let addexp = ('1')
   //bot.channels.cache.get('728620845001343070').messages.cache.get('739520844492963950').edit(sauvegarde2) ;
   //bot.channels.cache.get('728620845001343070').messages.cache.get('739520871021936680').edit(exp) ;
   //bot.channels.cache.get('728620845001343070').messages.cache.get('739520883202457610').edit(prefixe);
-  //bot.channels.cache.get('728620845001343070').messages.cache.get('739520892140519475').edit(sauvegarde);
+
 
   //______________________________________________________________________________________________________________________________________________
 
